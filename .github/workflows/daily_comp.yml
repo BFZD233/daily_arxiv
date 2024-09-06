@@ -49,7 +49,7 @@ jobs:
       - name: Feishu Robot Nessage
         uses: whatwewant/action-robot-feishu@v0.0.1
         with:
-          url: ${{ secrets.FEISHU_ROBOT_WEBHOOK_URL }}
+          url: ${{ secrets.FEISHU_URL }}
           title: notice
           text: |
             from github action test
