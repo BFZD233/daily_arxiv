@@ -51,7 +51,7 @@ jobs:
         env:
           FEISHU_CUSTOMERBOT_WEBHOOK: ${{ secrets.FEISHU_URL}}
           FEISHU_CUSTOMERBOT_SECRET: ${{ secrets.FEISHU_SEC }}
-          MSGTYPE: interactive
+          MSGTYPE: markdown
           content: |
               {
                 "title": "${{ steps.version.outputs.builddate }}",
