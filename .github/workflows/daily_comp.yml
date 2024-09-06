@@ -30,10 +30,10 @@ jobs:
           pip install arxivscraper
           pip install requests
 
-      # - name: Run daily arxiv 
-      #   id: pythonres
-      #   run: |
-      #     python daily_arxiv.py
+      - name: Run daily arxiv 
+        id: pythonres
+        run: |
+          python daily_arxiv.py
           
       # - name: Read file content
       #   id: description
