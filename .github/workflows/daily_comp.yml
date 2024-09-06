@@ -52,7 +52,8 @@ jobs:
           FEISHU_CUSTOMERBOT_WEBHOOK: ${{ secrets.FEISHU_URL}}
           FEISHU_CUSTOMERBOT_SECRET: ${{ secrets.FEISHU_SEC }}
           MSGTYPE: interactive
-          TITLE: "x-actions feishu message"
-          CONTENT: |
-            > Build Github Action Done.
-            > ^_^
+          content: |
+              {
+                "title": "${{ steps.version.outputs.builddate }}",
+                "text":  ${{steps.pythonres.outputs.content}}
+              }
