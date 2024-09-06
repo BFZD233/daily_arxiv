@@ -46,14 +46,16 @@ jobs:
           echo "builddate=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
         id: version  # this is used on variable path
   
-      - name: send dingtalk message
-        uses: ghostoy/dingtalk-action@master
+      - name: text message
+        uses: foxundermoon/feishu-action@v2
         with:
-          webhook: ${{ secrets.DING_URL }}
-          secret: ${{ secrets.DING_SEC }}
-          msgtype: markdown
+          url: ${{ secrets.FEISHU_URL }}
+          msg_type: text
           content: |
-            {
-              "title": "${{ steps.version.outputs.builddate }}",
-              "text":  ${{steps.pythonres.outputs.content}}
-            }
+            text: |
+              hahahah
+              from github action test
+              repository: ${{ github.repository }}
+              committer: ${{ github.actor }}
+              compare: ${{ github.event.compare }}
+              job status: ${{ job.status }}
