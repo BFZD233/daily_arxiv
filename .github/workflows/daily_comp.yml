@@ -52,9 +52,6 @@ jobs:
           FEISHU_CUSTOMERBOT_WEBHOOK: ${{ secrets.FEISHU_URL}}
           FEISHU_CUSTOMERBOT_SECRET: ${{ secrets.FEISHU_SEC }}
           MSGTYPE: interactive
-          TITLE: "今日文章"
+          TITLE: "${{ steps.version.outputs.builddate }}"
           CONTENT: |
-              {
-                "title": "${{ steps.version.outputs.builddate }}",
-                "text":  ${{steps.pythonres.outputs.content}}
-              }
+              ${{steps.pythonres.outputs.content}}
