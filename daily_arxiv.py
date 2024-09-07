@@ -67,7 +67,7 @@ if __name__ == "__main__":
     DateToday = datetime.date.today()
     # N = 2 # 往前查询的天数
     # data_all = []
-    day = str(DateToday + timedelta(-2))
+    day = str(DateToday + timedelta(-1))
     print(day)
     #     # you can add the categories in cats
     cats = [
