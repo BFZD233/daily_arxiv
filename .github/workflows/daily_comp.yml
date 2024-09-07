@@ -54,4 +54,4 @@ jobs:
           MSGTYPE: interactive
           TITLE: "${{ steps.version.outputs.builddate }}"
           CONTENT: |
-              "${{steps.pythonres.outputs.content}}"
+              ${{steps.pythonres.outputs.content}}
