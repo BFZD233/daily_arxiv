@@ -83,7 +83,8 @@ if __name__ == "__main__":
         res_str += v
     with open(os.environ["GITHUB_OUTPUT"], "a") as f:
         if len(fmt_md) == 0:
-            json_str = json.dumps("今天是休假喵~")
+            json_str = "今天是休假喵~"
+            # json_str = json.dumps("今天是休假喵~")
             f.write(f"content={json_str}")
         else:
             f.write(f"content={json.dumps(res_str)}")
