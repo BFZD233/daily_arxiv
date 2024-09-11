@@ -88,5 +88,5 @@ if __name__ == "__main__":
             f.write(f"content={json_str}")
         else:
             print(res_str)
-            f.write(f"content={res_str}")
+            f.write(f"content=\"{res_str}\"")
             # f.write(f"content={json.dumps(res_str)}")
