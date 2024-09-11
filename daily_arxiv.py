@@ -80,6 +80,7 @@ if __name__ == "__main__":
     fmt_md = get_code(res)
     res_str = ""
     for k, v in fmt_md.items():
+        res_str += " "
         res_str += v
     with open(os.environ["GITHUB_OUTPUT"], "a") as f:
         if len(fmt_md) == 0:
@@ -90,4 +91,4 @@ if __name__ == "__main__":
             print(type(res_str))
             processed_res_str = json.dumps(res_str).replace("\\n", "")
             f.write(f"content={processed_res_str}")
-            # f.write(f"content={json.dumps(res_str)}")
+            f.write(f"content={json.dumps(res_str)}")
