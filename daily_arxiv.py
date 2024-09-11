@@ -87,4 +87,5 @@ if __name__ == "__main__":
             # json_str = json.dumps("今天是休假喵~")
             f.write(f"content={json_str}")
         else:
-            f.write(f"content={json.dumps(res_str)}")
+            f.write(f"content={res_str}")
+            # f.write(f"content={json.dumps(res_str)}")
