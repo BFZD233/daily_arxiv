@@ -88,6 +88,6 @@ if __name__ == "__main__":
             f.write(f"content={json_str}")
         else:
             print(type(res_str))
-            processed_res_str = json.dumps(res_str).replace("\\n\\n", "  \\n\\n")
+            processed_res_str = json.dumps(res_str).replace("\\n\\n", "\\n")
             f.write(f"content={processed_res_str}")
             # f.write(f"content={json.dumps(res_str)}")
